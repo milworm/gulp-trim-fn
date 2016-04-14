@@ -1,7 +1,5 @@
 # A gulp module to obfuscate JS private functions.
 
-![Demo](https://raw.githubusercontent.com/milworm/gulp-trim-fn/master/demo.gif)
-
 [![Support](https://supporter.60devs.com/api/b/399936c021d5111d90001de85283a4b5/gulp-trim-fn)](https://supporter.60devs.com/support/399936c021d5111d90001de85283a4b5/gulp-trim-fn)
 
 ## Introduction
