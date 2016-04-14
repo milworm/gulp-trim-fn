@@ -1,6 +1,3 @@
-const gulp = require('gulp');
-const babel = require('gulp-babel');
-const watch = require('gulp-watch');
 const through = require("through2");
 const JsFile = require("./JsFile").default;
 
