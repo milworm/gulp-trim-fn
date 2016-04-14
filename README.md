@@ -5,7 +5,7 @@
 [![Support](https://supporter.60devs.com/api/b/399936c021d5111d90001de85283a4b5/gulp-trim-fn)](https://supporter.60devs.com/support/399936c021d5111d90001de85283a4b5/gulp-trim-fn)
 
 ## Introduction
-gulp-trim-fn is a gulp module that obfuscates your js files in order to protect your code.
+gulp-trim-fn is a gulp module that obfuscates your private functions in js files in order to protect your code.
 
 ## Installation
     npm install gulp-trim-fn --save-dev
@@ -20,6 +20,35 @@ gulp.task('trim-fn', () => {
             .pipe(trimFn())
             .pipe(gulp.dest('./lib/'));
 });
+```
+
+## Example
+Before:
+```javascript
+function SideBar() {}
+SideBar.prototype = {
+	render: function() {
+		var data = this._getRenderData();
+		document.body.innerHTML = this._getTpl().apply(data);
+	},
+	_getTpl: function() {},
+	_getRenderData: function() {},
+	_getElement: function() {}
+}
+```
+
+After:
+```javascript
+function SideBar() {}
+SideBar.prototype = {
+	render: function() {
+		var data = this.a1();
+		document.body.innerHTML = this.a2().apply(data);
+	},
+	a2: function() {},
+	a1: function() {},
+	a3: function() {}
+}
 ```
 
 ## Authors and Contributors
