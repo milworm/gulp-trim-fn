@@ -1,6 +1,6 @@
 # A gulp module to obfuscate JS private functions.
 
-[![Support](https://supporter.60devs.com/api/b/399936c021d5111d90001de85283a4b5/gulp-trim-fn)](https://supporter.60devs.com/support/399936c021d5111d90001de85283a4b5/gulp-trim-fn)
+[![Support](https://supporterhq.com/api/b/399936c021d5111d90001de85283a4b5/gulp-trim-fn)](https://supporterhq.com/support/399936c021d5111d90001de85283a4b5/gulp-trim-fn)
 
 ## Introduction
 gulp-trim-fn is a gulp module that obfuscates your private functions in js files in order to protect your code.
