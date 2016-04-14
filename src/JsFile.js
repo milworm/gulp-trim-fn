@@ -42,6 +42,9 @@ export default class {
                     }
                 }
 
+                if(typeof node[property] != 'string')
+                    return ;
+
                 if(node[property].indexOf('_') !== 0)
                     return ;
 
