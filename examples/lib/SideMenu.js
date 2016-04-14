@@ -9,11 +9,16 @@ SideMenu.prototype = {
         document.body.innerHTML = 'template + ' + JSON.stringify(data);
     },
     a2: function () {
-        console.log('_getElementConfig');
+        console.log('a2');
     },
     a3: function () {
-        console.log('_getData');
+        console.log('a3');
     },
     a1: function () {
-    }
+    },
+    methods: [{
+            key: 'a3',
+            value: function () {
+            }
+        }]
 };

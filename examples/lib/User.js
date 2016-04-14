@@ -9,9 +9,9 @@ User.prototype = {
         document.body.innerHTML = 'template + ' + JSON.stringify(data);
     },
     a1: function () {
-        console.log('_getElementConfig');
+        console.log('a1');
     },
     a2: function () {
-        console.log('_getData');
+        console.log('a2');
     }
 };

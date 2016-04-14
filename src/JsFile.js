@@ -20,17 +20,32 @@ export default class {
     }
 
     _findAndReplace() {
-        let lastKey = "a0";
+        let lastKey = 'a0';
 
         estraverse.traverse(this._ast, {
             enter: (node, parent) => {
-                if(node.type != "Identifier")
+                let property;
+
+                switch(node.type) {
+                    case 'Literal': {
+                        property = 'value';
+                        break;
+                    }
+
+                    case 'Identifier': {
+                        property = 'name';
+                        break;
+                    }
+
+                    default: {
+                        return ;
+                    }
+                }
+
+                if(node[property].indexOf('_') !== 0)
                     return ;
 
-                if(node.name.indexOf('_') !== 0)
-                    return ;
-
-                let name = node.name;
+                let name = node[property];
                 let key = this._replacements[name];
 
                 if(!key) {
@@ -39,7 +54,7 @@ export default class {
                     lastKey = key;
                 }
 
-                node.name = key;
+                node[property] = key;
             }
         });
     }

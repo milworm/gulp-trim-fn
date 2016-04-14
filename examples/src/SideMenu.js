@@ -20,5 +20,10 @@ SideMenu.prototype = {
 
 	_startTimer: function() {
 		
-	}
+	},
+
+	methods: [{
+		key: '_getData',
+		value: function() {}
+	}]
 }
