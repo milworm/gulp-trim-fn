@@ -15,7 +15,7 @@ const trimFn = require('gulp-trim-fn');
 
 gulp.task('trim-fn', () => {
 	return gulp.src('./src/**/*.js')
-  	.pipe(trimFn())
+    .pipe(trimFn())
     .pipe(gulp.dest('./lib/'));
 });
 ```
